@@ -1,0 +1,55 @@
+/* Tema Cinza Escuro */
+.theme-cinza {
+    --bg: #23272b;
+    --bg2: #2e3237;
+    --fg: #e0e0e0;
+    --fg2: #b0b0b0;
+    --accent: #888;
+    --accent2: #aaa;
+    --border: #444;
+    --shadow: 0 2px 8px #0006;
+    --widget-bg: #292d31;
+    --widget-outline: #444;
+    --brand: #b0b0b0;
+    --sidebar-bg: #23272b;
+    --sidebar-fg: #e0e0e0;
+    --sidebar-active: #888;
+    --sidebar-hover: #444;
+    --button-bg: #444;
+    --button-fg: #e0e0e0;
+    --button-hover: #555;
+    --input-bg: #2e3237;
+    --input-fg: #e0e0e0;
+    --input-border: #555;
+}
+.theme-neonverde {
+    --bg: #0a0f0a;
+    --panel: #101a10;
+    --text: #eaffea;
+    --muted: #b7ffc7;
+    --brand1: #00ff7a;
+    --brand2: #00ffb3;
+    --brand3: #39ff14;
+}
+@tailwind base;@tailwind components;@tailwind utilities;
+/* Default */
+:root{--bg:#0b0710;--panel:#140c1a;--text:#e9ecf4;--muted:#c4c7d1;--brand1:#ff007a;--brand2:#ff6a00;--brand3:#7a3cff;}
+.theme-neon{--bg:#090a14;--panel:#131528;--text:#ebf4ff;--muted:#b7c1df;--brand1:#00e5ff;--brand2:#7aff00;--brand3:#bf00ff;}
+.theme-ocean{--bg:#06131a;--panel:#0d2430;--text:#e6f7ff;--muted:#b3d6e6;--brand1:#00b4d8;--brand2:#48cae4;--brand3:#0096c7;}
+.theme-dracula{--bg:#0f0e17;--panel:#1a1926;--text:#eaeaea;--muted:#c9c9dc;--brand1:#ff79c6;--brand2:#bd93f9;--brand3:#ffb86c;}
+.theme-light{--bg:#f6f7fb;--panel:#ffffff;--text:#0e1320;--muted:#545b70;--brand1:#7c3aed;--brand2:#f97316;--brand3:#0ea5e9;}
+.theme-royal{--bg:#0b0a16;--panel:#16152a;--text:#f3f5ff;--muted:#c8ccf0;--brand1:#b794f4;--brand2:#f59e0b;--brand3:#60a5fa;}
+.theme-midnight{--bg:#0a0d1a;--panel:#12182a;--text:#eaf0ff;--muted:#b6c0e0;--brand1:#5eead4;--brand2:#22d3ee;--brand3:#64748b;}
+.theme-sunset{--bg:#130a0f;--panel:#1e0f14;--text:#fff1f2;--muted:#f5c2c7;--brand1:#ff6b6b;--brand2:#f59e0b;--brand3:#f472b6;}
+.theme-cyberpunk{--bg:#0a0013;--panel:#12001f;--text:#eaffff;--muted:#bde0fe;--brand1:#00ffd5;--brand2:#ff00aa;--brand3:#ffc400;}
+html,body,#root{height:100%}
+body{color:var(--text);background:radial-gradient(1200px 600px at 20% -10%,color-mix(in oklab,var(--panel) 70%,black),var(--bg) 60%);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+.widget{@apply border border-white/10 rounded-2xl p-4 shadow-panel;background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.015))}
+.widget-click{@apply cursor-pointer transition-transform duration-150}.widget-click:hover{transform:translateY(-2px);box-shadow:0 14px 40px rgba(0,0,0,.45);border-color:rgba(255,255,255,.2)}.thin-outline{border:1px solid rgba(255,255,255,.15)}
+.equalizer{display:flex;align-items:flex-end;gap:10px;height:140px;width:100%}.equalizer span{width:14px;border-radius:8px;background:linear-gradient(180deg,var(--brand1),var(--brand2),var(--brand3))}
+.card-saldo{@apply flex items-center gap-6 rounded-2xl border border-white/10 p-6;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01)) !important}.big{font-size:46px;font-weight:800}.unit{font-size:.65em;opacity:.9}.trend{font-size:14px;color:#ffbb66}
+    .layout{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+    .sidebar{position:sticky;top:0;height:100vh;padding:20px;background:radial-gradient(600px 200px at 40% 0%,rgba(255,255,255,.05),transparent 60%),linear-gradient(180deg,rgba(255,255,255,.06),rgba(0,0,0,.25));border-right:1px solid rgba(255,255,255,.1);box-shadow:0 12px 42px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,255,255,.05);backdrop-filter:blur(3px)}
+.side-title{font-family:'Playfair Display',serif;font-weight:800;font-size:20px;margin-bottom:16px;opacity:.98}.side-link{display:block;margin:10px 0;padding:12px 14px;border:1px solid rgba(255,255,255,.12);border-radius:14px;color:var(--text);background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));transition:transform .15s ease,border-color .15s ease}.side-link:hover{transform:translateY(-1px);border-color:rgba(255,255,255,.24)}.side-link.active{outline:2px solid rgba(255,255,255,.28)}
+.wrap{max-width:1440px;margin:18px auto;display:grid;gap:28px}.full{grid-column:1/-1}
+.topbar{@apply flex items-center justify-between px-6 py-5 border-b border-white/10}.brand{font-family:'Playfair Display',serif;font-weight:800;font-size:24px}

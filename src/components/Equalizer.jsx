@@ -1,0 +1,1 @@
+export default function Equalizer({ values=[] }){ const has=values.length>0; const max=has?Math.max(...values,1):1; const bars=has?values:Array.from({length:40},()=>20); return (<div className="equalizer thin-outline">{bars.map((v,i)=>{ const h=has?Math.max(8,(v/max)*130):20; return <span key={i} style={{height:h}}/> })}</div>) }
